@@ -205,7 +205,6 @@ def get_frequency(timestamps: np.ndarray | pd.Series) -> int:
     timestamps = np.asarray([t for t in timestamps])
     # sample 50 random timestamps
     indices = np.random.random_integers(1, len(timestamps) - 1, 50)
-    # numpy timedelta is in nanoseconds
     shifts = [(timestamps[i] - timestamps[i - 1]).total_seconds() for i in indices]
 
     return int(1 / np.median(shifts))

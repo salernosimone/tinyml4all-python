@@ -42,6 +42,9 @@ def capture_serial(
                         if select_model(reader.bytes, reader):
                             continue
 
+                    if data is None:
+                        continue
+
                     if data[0] == 0xFF and data[1] == 0xD8:
                         # looks like a valid jpeg image
                         image = Image.open(BytesIO(data))
