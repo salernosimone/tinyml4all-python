@@ -6,7 +6,7 @@ build-backend = "flit_core.buildapi"
 name = "tinyml4all"
 authors = [{name = "Simone Salerno", email = "info@salernosimone.com"}]
 description = "Train Machine Learning pipelines in Python, run on any embedded device"
-version = "1.0.4"
+version = "1.0.6"
 license = "GPL-3.0-or-later"
 license-files = ["LICENSE"]
 dependencies = [

@@ -170,7 +170,7 @@ def asset(path: str) -> str:
         os.path.dirname(__file__), "..", "transpile", "templates", "__assets__", path
     )
 
-    return Path(asset_path).read_text()
+    return Path(asset_path).read_text(encoding="utf-8")
 
 
 def sample_indices(length: int, n: int) -> Array:
